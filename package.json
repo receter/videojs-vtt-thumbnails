@@ -1,6 +1,6 @@
 {
-  "name": "videojs-vtt-thumbnails",
-  "version": "0.0.13",
+  "name": "@simplease/videojs-vtt-thumbnails",
+  "version": "0.0.14",
   "description": "Display thumnails on progress bar hover, driven by external VTT files.",
   "main": "dist/videojs-vtt-thumbnails.cjs.js",
   "module": "dist/videojs-vtt-thumbnails.es.js",
@@ -9,7 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chrisboustead/videojs-vtt-thumbnails.git"
+    "url": "https://github.com/receter/videojs-vtt-thumbnails.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.simplease.at"
   },
   "generator-videojs-plugin": {
     "version": "5.0.3"
@@ -33,7 +36,7 @@
     "docs:toc": "doctoc README.md",
     "lint": "vjsstandard",
     "start": "npm-run-all -p start:server watch",
-    "start:server": "static -a 0.0.0.0 -p 9999 -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}' .",
+    "start:server": "static -a 127.0.0.1 -p 9999 -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}' .",
     "pretest": "npm-run-all lint build",
     "test": "karma start test/karma.conf.js",
     "preversion": "npm test",
@@ -90,7 +93,7 @@
     "conventional-changelog-videojs": "^3.0.0",
     "doctoc": "^1.4.0",
     "eslint": "^7.0.0",
-    "husky": "^0.13.3",
+    "husky": "^0.13.4",
     "jsdoc": "^3.6.4",
     "karma": "^1.7.0",
     "karma-chrome-launcher": "^2.1.1",
