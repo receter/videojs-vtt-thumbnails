@@ -94,8 +94,11 @@ Options are passed in the same object as the source location.
 - `showTimestamp` (Boolean, Default: false) - Disables the timestamp that is shown on hover.
 
 ### Development
-DocToc must be installed globally
+DocToc must be installed globally to commit
 npm install -g doctoc
+
+vjsstandard must be installed globally to push
+npm install -g videojs-standard
 
 ## License
 

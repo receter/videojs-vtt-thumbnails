@@ -398,7 +398,7 @@ class vttThumbnailsPlugin {
     const imageProps = this.getPropsFromDef(vttImageDef);
 
     let spriteImage;
-    let forceSpriteImage = this.options.forceSpriteImage;
+    const forceSpriteImage = this.options.forceSpriteImage;
 
     if (forceSpriteImage) {
       spriteImage = forceSpriteImage;
