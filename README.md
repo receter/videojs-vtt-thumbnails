@@ -18,6 +18,7 @@ Note: Plugin hides the default skin's mouse display timestamp on hover.
 - [Options](#options)
   - [Example](#example)
   - [Available Options](#available-options)
+  - [Development](#development)
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -91,6 +92,10 @@ Options are passed in the same object as the source location.
 ### Available Options
 
 - `showTimestamp` (Boolean, Default: false) - Disables the timestamp that is shown on hover.
+
+### Development
+DocToc must be installed globally
+npm install -g doctoc
 
 ## License
 

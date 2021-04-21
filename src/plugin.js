@@ -397,7 +397,16 @@ class vttThumbnailsPlugin {
 
     const imageProps = this.getPropsFromDef(vttImageDef);
 
-    cssObj.background = 'url("' + imageProps.image + '") no-repeat -' + imageProps.x + 'px -' + imageProps.y + 'px';
+    let spriteImage;
+    let forceSpriteImage = this.options.forceSpriteImage;
+
+    if (forceSpriteImage) {
+      spriteImage = forceSpriteImage;
+    } else {
+      spriteImage = imageProps.image;
+    }
+
+    cssObj.background = 'url("' + spriteImage + '") no-repeat -' + imageProps.x + 'px -' + imageProps.y + 'px';
     cssObj.width = imageProps.w + 'px';
     cssObj.height = imageProps.h + 'px';
     cssObj.url = imageProps.image;
