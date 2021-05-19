@@ -396,20 +396,18 @@ class vttThumbnailsPlugin {
     }
 
     const imageProps = this.getPropsFromDef(vttImageDef);
-
-    let spriteImage;
     const forceSpriteImage = this.options.forceSpriteImage;
 
-    if (forceSpriteImage) {
-      spriteImage = forceSpriteImage;
-    } else {
-      spriteImage = imageProps.image;
-    }
-
-    cssObj.background = 'url("' + spriteImage + '") no-repeat -' + imageProps.x + 'px -' + imageProps.y + 'px';
     cssObj.width = imageProps.w + 'px';
     cssObj.height = imageProps.h + 'px';
-    cssObj.url = imageProps.image;
+
+    if (forceSpriteImage) {
+      cssObj.background = 'url("' + forceSpriteImage + '") no-repeat -' + imageProps.x + 'px -' + imageProps.y + 'px';
+      cssObj.url = forceSpriteImage;
+    } else {
+      cssObj.background = 'url("' + imageProps.image + '") no-repeat -' + imageProps.x + 'px -' + imageProps.y + 'px';
+      cssObj.url = imageProps.image;
+    }
 
     return cssObj;
   }
